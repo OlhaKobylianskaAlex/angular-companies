@@ -1,0 +1,13 @@
+<div class="search">
+  <form class="search-form" [formGroup]="form">
+    <div class="search-form__title">Filter by keywords</div>
+
+    <mat-form-field class="search-form__container">
+      <span class="search-form__icon" (click)="search(input.value)">
+        <img src="../../../../../assets/img/search.svg" alt="icon">
+      </span>
+      <input #input matInput formControlName="value" type="text" placeholder="Search"
+        (keyup.enter)="search(input.value)">
+    </mat-form-field>
+  </form>
+</div>

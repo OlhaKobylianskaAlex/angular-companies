@@ -1,0 +1,29 @@
+@import "./assets/styles/mixins.scss";
+@import "./assets/styles/variables.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $font-main;
+}
+
+.spinner {
+  @include flex(center, center);
+}
+
+.accent {
+  background-color: $color-accent;
+}

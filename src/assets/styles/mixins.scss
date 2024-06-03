@@ -1,0 +1,42 @@
+@mixin container(
+  $width: 1160px,
+  $height: auto,
+  $paddingT: $gap,
+  $paddingSR: $gap
+) {
+  max-width: $width;
+  min-height: $height;
+  margin: 0 auto;
+  padding: $paddingT $paddingSR;
+}
+
+@mixin flex($content: center, $align: center, $gap: 0, $direction: row) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin text-custom(
+  $size: 1rem,
+  $weight: 400,
+  $color: $color-dark,
+  $pos: "start",
+  $height: auto
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-align: $pos;
+  color: $color;
+}
+
+@mixin size-text($line: auto) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}

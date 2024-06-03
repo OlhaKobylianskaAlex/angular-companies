@@ -1,0 +1,17 @@
+@import "../../../../../assets/styles/variables.scss";
+@import "../../../../../assets/styles/mixins.scss";
+
+.data {
+  &-count {
+    margin: 40px 0 45px;
+    padding-bottom: 5px;
+
+    @include text-custom(1rem, 500, $color-text-dark);
+
+    border-bottom: 1px solid $color-dark-light;
+  }
+
+  &-content {
+    margin: 45px 0;
+  }
+}

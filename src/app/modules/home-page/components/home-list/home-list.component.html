@@ -1,0 +1,25 @@
+<div class="article">
+  <mat-card *ngFor="let article of data" class="article-items" (click)="redirectTo(article.id)">
+    <mat-card-content class="article-items__content">
+      <div class="article-items__images">
+        <img #img src="{{article.image_url}}" (error)="imageError(img)">
+      </div>
+      <div class="article-items__info">
+        <div class="article-items__date">
+          <div class="article-items__date-icon">
+            <img src="../../../../../assets/img/date.svg" alt="icon">
+          </div>
+          <div class="article-items__date-text">{{article.updated_at | date }}</div>
+        </div>
+        <div class="article-items__title" [innerHTML]="article.title | color: (search$ | async)"></div>
+        <div class="article-items__description" [innerHTML]="article.summary | color: (search$ | async)"></div>
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <div class="btn">
+        <span class="btn-text">Read more </span>
+        <span class="btn-icon"><img src="../../../../../assets/img/arrow.svg" alt="arrow"></span>
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</div>

@@ -1,0 +1,17 @@
+@import "../assets/styles/mixins.scss";
+@import "../assets/styles/variables.scss";
+
+main {
+  min-height: 100vh;
+  background-color: $color-light;
+}
+
+.main-container {
+  @include container($xl, 100px, 0, 75px);
+  padding-bottom: 50px;
+
+  @media (max-width: $md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

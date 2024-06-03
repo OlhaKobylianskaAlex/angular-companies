@@ -1,0 +1,87 @@
+@import "../../../../../assets/styles/variables.scss";
+@import "../../../../../assets/styles/mixins.scss";
+
+.details {
+  width: 100%;
+  position: relative;
+
+  &-content {
+    position: absolute;
+    top: 150px;
+    left: 75px;
+    right: 75px;
+
+    @media (max-width: $lg) {
+      top: 50px;
+      left: 25px;
+      right: 25px;
+    }
+
+    @media (max-width: $md) {
+      top: 30px;
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  &-description {
+    width: 100%;
+    padding: 35px 75px 50px;
+
+    background-color: $color-white;
+    border: 1px solid $color-dark-light;
+    border-radius: 5px;
+
+    @media (max-width: $lg) {
+      padding: 20px 25px 30px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+      @include text-custom(1.5rem, 400, $color-text-dark, center);
+    }
+  }
+
+  &__header {
+    width: 100%;
+    max-height: 245px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .btn {
+    margin: 35px 0 45px 75px;
+    width: 200px;
+
+    @media (max-width: $lg) {
+      margin-left: 40px;
+    }
+
+    @include flex(flex-start, center, 6px, row);
+    cursor: pointer;
+
+    &-text {
+      @include text-custom(1rem, bold, $color-text-dark);
+    }
+
+    &-icon {
+      height: 10px;
+      @include flex(flex-start, center);
+
+      img {
+        height: 100%;
+        transform: rotateY(180deg);
+      }
+    }
+
+    &:hover .btn-text,
+    &:hover .btn-icon {
+      color: $color-active;
+      transform: translateX(-10px);
+    }
+  }
+}

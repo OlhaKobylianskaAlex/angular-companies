@@ -1,0 +1,4 @@
+<ng-container *ngIf="articleInfo$ | async as data;">
+  <ng-container [ngTemplateOutlet]="contentTemplate"
+    [ngTemplateOutletContext]="{ $implicit: data.data }"></ng-container>
+</ng-container>

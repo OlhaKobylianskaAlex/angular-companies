@@ -1,0 +1,8 @@
+<app-home-search></app-home-search>
+
+<app-home-list-weather-wrapper>
+  <ng-template let-data>
+    <div class="data-count">Results: {{data.length}}</div>
+    <app-home-list class="data-content" [data]="data"></app-home-list>
+  </ng-template>
+</app-home-list-weather-wrapper>
